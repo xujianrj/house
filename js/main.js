@@ -13,9 +13,21 @@ function loadPosts() {
 function loadHeader(){
     $.get('header.html', function (res) {
        $('#header').html(res);
+        $( "span.menu" ).click(function() {
+            $( "ul.nav1" ).slideToggle( 300, function() {
+                // Animation complete.
+            });
+        });
+    })
+}
+function loadFooter(){
+    $.get('footer.html', function (res) {
+        $('#footer').html(res);
     })
 }
 
+
 $(document).ready(function () {
     loadHeader();
+    loadFooter();
 });
