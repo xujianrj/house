@@ -248,11 +248,11 @@ body a:hover{
 }
 .posts-left{
 	float: left;
-	width:35%;
+	width:20%;
 }
 .posts-right{
 	float:right;
-	width:60%;
+	width:80%;
 }	
 .posts-right lable {
 	font-size: 14px;
