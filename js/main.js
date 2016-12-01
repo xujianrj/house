@@ -10,17 +10,35 @@ function loadPosts() {
         });
     })
 }
-function loadHeader(){
+function loadHeader() {
+
     $.get('header.html', function (res) {
-       $('#header').html(res);
-        $( "span.menu" ).click(function() {
-            $( "ul.nav1" ).slideToggle( 300, function() {
+        $('#header').html(res);
+        $('#nav1 li').removeClass('active');
+        switch (window.currentIndex) {
+            case 1:
+                $('#home').addClass('active');
+                break;
+            case 2:
+                $('#service').addClass('active');
+                break;
+            case 3:
+                $('#blog').addClass('active');
+                break;
+            case 4:
+                $('#us').addClass('active');
+                break;
+            default:
+                break;
+        }
+        $("span.menu").click(function () {
+            $("ul.nav1").slideToggle(300, function () {
                 // Animation complete.
             });
         });
     })
 }
-function loadFooter(){
+function loadFooter() {
     $.get('footer.html', function (res) {
         $('#footer').html(res);
     })
